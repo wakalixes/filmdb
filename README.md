@@ -1,4 +1,4 @@
 filmdb
 ======
 
-webinterface for recording information about seen movies in a sql database, features statistical analysis
+webinterface for storing information about seen movies in a sql database, features statistical analysis
