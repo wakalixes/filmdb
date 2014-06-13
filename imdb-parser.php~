@@ -24,6 +24,10 @@ if (isset($_GET["search"])) {
 	
 	$imdb_search = get_data($url);
 	echo $url.'<br>';
+	//$num_results = get_match('/Titles<\/b> \(Displaying (\d*) Result\D?\)<table>/isU',$imdb_search);
+	//echo $num_results.' results<br>';
+	//for ($i=1;$i<=$num_results;$i++) {
+	//	echo $i.'<br>';
 	$last_match_pos = 0;
 	do {
 		$ret = preg_match('/result_text.*?<a href="\/title\/(\S{9}).*?" >(.*?)<\/a> \((.*?)\) .*?<\/td>/',$imdb_search,$matches,PREG_OFFSET_CAPTURE,$last_match_pos);
@@ -39,6 +43,9 @@ if (isset($_GET["search"])) {
   	  echo $matches[3][1].'<br>';
   	}
   } while ($found_match);
+	//}
+	
+
 }
 
 if (isset($_GET["parse"])) {

@@ -27,10 +27,10 @@
 
 <?php
 $db_server = 'localhost';
-$db_user = '';
-$db_passwort = '';
+$db_user = 'albertsql1';
+$db_passwort = 'xr,juMzJh8Z6ddZG';
 $link = mysql_connect($db_server, $db_user, $db_passwort) or die ('Keine Verbindung'.mysql_error());
-mysql_select_db("") or die('Auswahl der Datenbank fehlgeschlagen.');
+mysql_select_db("albertsql1") or die('Auswahl der Datenbank fehlgeschlagen.');
 if (isset($_POST["date"])) $date = $_POST["date"];
 if (isset($_GET["date"])) $date = $_GET["date"];
 
